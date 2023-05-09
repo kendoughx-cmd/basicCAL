@@ -69,7 +69,7 @@ function operation(operate) {
             break;
         case '*':
             document.getElementById('recentInput').value = numbers + operate;
-            currentOperation = op;
+            currentOperation = operate;
             break;
         case '/':
             document.getElementById('recentInput').value = numbers + operate;
