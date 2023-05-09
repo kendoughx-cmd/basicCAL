@@ -1,90 +1,62 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator ni Kent</title>
+     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<!-- component -->
-<div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center px-5 py-5">
-    <div class="w-full mx-auto rounded-xl bg-gray-100 shadow-xl text-gray-800 relative overflow-hidden" style="max-width:1080px">
-        <div class="w-full h-40 bg-gradient-to-b from-indigo-800 to-purple-500 flex items-end text-right">
-            <div class="w-full py-5 px-6 text-6xl text-white font-normal hover:text-cyan-300">150.0</div>
+    <div class="bg-gray-200 w-screen h-screen flex justify-center items-center">
+      <div class="w-64 h-auto bg-white rounded-2xl shadow-xl border-4 border-gray-100">
+        <div class="w-auto mx-3 my-2 h-6 flex justify-between">
+          <div class="text-sm">08:57</div>
+          <div class="flex items-center text-xs space-x-1">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-three-quarters text-sm"></i>
+          </div>
         </div>
-        <div class="w-full bg-gradient-to-b from-pink-500 to-yellow-500">
-            <div class="flex w-full">
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-text-orange-500 hover:bg-opacity-20 text-white text-opacity-50 text-xl font-semibold hover:text-orange-500">C</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-white text-opacity-50 text-xl font-semibold hover:text-orange-500">+/-</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-white text-opacity-50 text-xl font-semibold hover:text-orange-500">%</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none bg-indigo-700 bg-opacity-10 hover:bg-opacity-20 text-white text-2xl font-semibold hover:text-orange-500">÷</button>
-                </div>
-            </div>
-            <div class="flex w-full">
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">7</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">8</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">9</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none bg-indigo-700 bg-opacity-10 hover:bg-opacity-20 text-white text-xl font-semibold hover:text-orange-500">⨉</button>
-                </div>
-            </div>
-            <div class="flex w-full">
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">4</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">5</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">6</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none bg-indigo-700 bg-opacity-10 hover:bg-opacity-20 text-white text-xl font-semibold hover:text-orange-500">-</button>
-                </div>
-            </div>
-            <div class="flex w-full">
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">1</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">2</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">3</button>
-                </div>
-                <div class="w-1/4 border-r border-b border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none bg-indigo-700 bg-opacity-10 hover:bg-opacity-20 text-white text-xl font-semibold hover:text-orange-500">+</button>
-                </div>
-            </div>
-            <div class="flex w-full">
-                <div class="w-1/4 border-r border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">0</button>
-                </div>
-                <div class="w-1/4 border-r border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none hover:bg-indigo-700 hover:bg-opacity-20 text-indigo-600 text-xl font-normal hover:text-cyan-300">.</button>
-                </div>
-                <div class="w-2/4 border-r border-indigo-400">
-                    <button class="w-full h-16 outline-none focus:outline-none bg-indigo-700 bg-opacity-30 hover:bg-opacity-40 text-white text-xl font-extrabold hover:text-orange-500">=</button>
-                </div>
-            </div>
+                    
+        <div class="w-full h-40 bg-gradient-to-b flex flex-col items-start text-right bg-transparent-950">
+
+          <input type="text" class="w-full text-right text-2xl text-black font-thin py-5 px-4 bg-transparent mb-10" id="recentInput" value="" disabled>
+          <input type="text" class="w-full text-right text-4xl text-black font-bold px-4 bg-transparent" id="inputValue" value="0" disabled>
         </div>
+
+        <div class="w-auto m-1 h-auto mb-3">
+
+          <div class="grid grid-cols-4 gap-1 px-2 py-2">
+            <button class="bg-yellow-100 shadow-md rounded-2xl w-12 h-12 text-yellow-600 font-medium flex justify-center items-center mb-2" onclick="clearAll()">C</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clearEntry()">CE</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="percentage()">%</button>
+            <button class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center" onclick="operation('/')">/</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center mb-2" onclick="clickNumber('9')">9</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('8')">8</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('7')">7</button>
+            <button class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center" onclick="operation('*')">x</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center mb-2" onclick="clickNumber('6')">6</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('5')">5</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('4')">4</button>
+            <button class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center" onclick="operation('-')">-</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center mb-2" onclick="clickNumber('3')">3</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('2')">2</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('1')">1</button>
+            <button class="bg-yellow-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center" onclick="operation('+')">+</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickNumber('0')">0</button>
+            <button class="bg-gray-200 shadow-md rounded-2xl w-12 h-12 text-black font-medium flex justify-center items-center" onclick="clickDecimal('.')">.</button>
+            <button class="bg-green-500 shadow-md rounded-2xl w-12 h-12 text-white font-medium text-xl flex justify-center items-center" onclick="calculate()">=</button>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-
-
+    <script src="main.js"></script>
 </body>
 </html>
